@@ -23,20 +23,22 @@ object Simple extends App {
 
   // Curry Func2 and write the full curried definition, as in Func0
   //--------------------------------------------------------------------------------------------
-  def Func2(a: Int, b: Int, c: Int): Int = { a + b + c }
+  def Func2(a: Int, b: Int, c: Int): Int = a + b + c 
+  val Func2Curried = (Func2 _).curried
+  def Func2FullCurried(a: Int)(b: Int) (c: Int) = a + b + c
 
   // f(x) = 1/x was definied as Partially Defined Function. Rewrite it with
   // A. pattern matching
   // B. Option
   //--------------------------------------------------------------------------------------------
-  def Func3a(a: Int): Option[Float] = {
+  def Func3b(a: Int): Option[Float] = {
     try {
       Some(1 / a)
     } catch {
       case _: Throwable => None
     }
   }
-  def Func3b(a: Int): Option[Float] = a match {
+  def Func3a(a: Int): Option[Float] = a match {
     case 0 => None
     case _ => Some(1 / a)
   }

@@ -38,8 +38,7 @@ object Advanced extends App {
     def recursiveSum(vec2: Vector[Int]): Int = {
       if (vec2.isEmpty) 0
       else {
-        val vecLength = vec2.length
-        vec2(vecLength - 1) + recursiveSum(vec2.dropRight(1))
+        vec2(vec2.length - 1) + recursiveSum(vec2.dropRight(1))
       }
     }
     val res5: Int = recursiveSum(vec)
