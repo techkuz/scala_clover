@@ -5,7 +5,7 @@ object SimpleTwo extends App {
 
   trait Speakable {
     val name: String
-    var message = "I'm "
+    val message = "I'm "
     def speak {println(message + name)}
   }
   
