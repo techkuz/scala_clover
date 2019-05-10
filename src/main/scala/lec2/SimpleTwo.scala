@@ -1,3 +1,6 @@
+package lec2
+
+
 object SimpleTwo extends App {
 // task 1: Dynamic Polymorphism
 // Implement a class hierarchy, according to the company.png UML diagram
@@ -63,7 +66,9 @@ object SimpleTwo extends App {
   }
 
   val p = new Duo("d", "c")
+  val d = new Duo(1.1, 2.2)
   println(p.less())
+  println(d.less())
 
 // task 3: Ad-hoc Polymorphism
 // Reimplement the reduce function from lec1 home work with ad-hoc Polymorphism. Implement both handwritten and library solutions
