@@ -3,26 +3,30 @@ object Simple extends App {
 // Implement a class hierarchy, according to the company.png UML diagram
 // Implement method def speak():Unit, which will display "I'm an employee", for example
 
-  trait Person {
+  trait Speakable {
     val name: String
     var message = "I'm "
-    def speak { println(message + name) }
+    def speak {println(message + name)}
+  }
+  
+  trait Person extends Speakable {
+    override val name = "a person"
   }
 
   trait Employee extends Person {
-    val name = "an employee"
+    override val name = "an employee"
   }
 
-  trait Engineer {
-    val name = "an egineer"
+  trait Engineer extends Speakable {
+    override val name = "an egineer"
   }
 
   trait Founder extends Person with Engineer {
     override val name = "a founder"
   }
 
-  trait Investor {
-    val name = "an investor"
+  trait Investor extends Speakable {
+    override val name = "an investor"
   }
 
   trait Owner extends Investor with Founder {
@@ -37,7 +41,7 @@ object Simple extends App {
     override val name = "a coworker"
   }
 
-  class Test extends Manager {}
+  class Test extends Coworker {}
   val t = new Test()
   t.speak
 
