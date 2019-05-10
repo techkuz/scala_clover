@@ -1,4 +1,4 @@
-object Advanced extends App {
+object AdvancedOne extends App {
 
   // def Sum (vec:Vector[Int]):Int = ???
 

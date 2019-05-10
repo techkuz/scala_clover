@@ -1,4 +1,4 @@
-object Simple extends App {
+object SimpleTwo extends App {
 // task 1: Dynamic Polymorphism
 // Implement a class hierarchy, according to the company.png UML diagram
 // Implement method def speak():Unit, which will display "I'm an employee", for example

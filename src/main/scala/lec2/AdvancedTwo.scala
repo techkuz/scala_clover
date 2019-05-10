@@ -1,4 +1,4 @@
-object Advanced extends App {
+object AdvancedTwo extends App {
 // task 1: Implement the method for Vector[Int] and List[Int]
 //  sealed abstract class Addable[A] {
 //    def sum:A

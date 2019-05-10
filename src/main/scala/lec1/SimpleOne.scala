@@ -2,7 +2,7 @@
 // Fix errors, rewrite functions or write your own implementations here
 // bku Apr 27 2019
 
-object Simple extends App {
+object SimpleOne extends App {
 
   // Fix error
   //--------------------------------------------------------------------------------------------
